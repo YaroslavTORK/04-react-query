@@ -4,6 +4,9 @@ import type { MoviesResponse } from '../types/movie';
 const BASE_URL = "https://api.themoviedb.org/3/search/movie";
 const ACCESS_TOKEN = import.meta.env.VITE_TMDB_TOKEN;
 
+console.log('ENV keys:', Object.keys(import.meta.env));
+console.log('TOKEN:', import.meta.env.VITE_TMDB_TOKEN);
+
 export async function fetchMovies(
   query: string,
   page: number
